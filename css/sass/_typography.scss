@@ -1,0 +1,35 @@
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.box-link{
+    margin-top: 10px;
+    padding: 0px 0px;
+    font-size: 1em;
+    text-decoration: none;
+    color: $white;
+    display: inline-block;
+    transition: .5s ease;
+    position: relative;
+
+    &::after{
+        content: '';
+        display: block;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 0%;
+        height: 1px;
+
+        transform: translate(0%, -50%);
+        transition: .5s ease ;
+
+        background-color: $white;
+    }
+
+    &:hover::after{
+        width: 100%;        
+    }
+}
